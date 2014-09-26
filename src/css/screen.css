@@ -21,26 +21,39 @@ table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
 *, *:after, *:before { box-sizing: border-box; }
 
-body { font-size: 14px; font-family: "Merriweather Sans", sans-serif; line-height: 1.1; text-align: center; }
+body { font-size: 14px; font-family: "Merriweather Sans", sans-serif; line-height: 1.1; background: #323a45; }
 
 a { text-decoration: none; }
-a:hover { text-decoration: underline; }
 
 video { width: auto; }
 
-.nav li { display: inline-block; }
-
-h3 { color: white; font-size: 22px; text-transform: uppercase; letter-spacing: 1.5px; }
+.nav { text-align: right; }
+.nav li { display: inline-block; padding: 30px 15px 0; }
+.nav li a { text-transform: uppercase; color: #fff; padding: 5px 15px; }
+.nav li a:hover { background: #ff4b59; border-radius: 19px; }
 
 .btn { text-transform: uppercase; background: white; padding: 24px 30px 20px; width: 290px; border-radius: 4px; box-shadow: 0px 4px 0px rgba(255, 255, 255, 0.5); font-weight: 600; font-size: 16px; }
 
 .line { margin: 15px auto; display: block; width: 87px; height: 4px; opacity: 0.15; background-color: #000; }
 
-.in { width: 1100px; margin: 0 auto; padding-top: 110px; padding-bottom: 120px; }
+.in, .header__in { width: 1100px; margin: 0 auto; }
 
-.l .col-1-4, .l .col-1-2 { float: left; }
+.logo { background: url('../img/sprites-se8abe2bb41.png') 0 -647px; width: 159px; height: 52px; float: left; }
+
+.header { color: #fff; position: relative; }
+.header::after { content: ""; background: url(../img/image-bg.png); opacity: 0.05; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; }
+.header__in { padding-top: 30px; }
+
+.l .c-1-4, .l .c-1-2 { float: left; }
 
 .l { *zoom: 1; }
 .l:after, .l:before { content: " "; display: table; clear: both; }
-.l .col-1-4 { width: 25%; }
-.l .col-1-2 { width: 50%; }
+.l .c-1-4 { width: 25%; }
+.l .c-1-2 { width: 50%; }
+
+.slider { padding-top: 50px; position: relative; }
+.slider .control { position: absolute; border: 2px solid #fff; padding: 10px 20px; border-radius: 2px; display: inline-block; top: 50%; }
+.slider .control._prev { left: -100px; }
+.slider .control._prev ._prev { display: inline-block; background: url('../img/sprites-se8abe2bb41.png') 0 -912px; width: 18px; height: 27px; }
+.slider .control._next { right: -100px; }
+.slider .control._next ._next { display: inline-block; background: url('../img/sprites-se8abe2bb41.png') 0 -792px; width: 18px; height: 27px; }

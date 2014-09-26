@@ -1,0 +1,21 @@
+.slider
+	padding-top: 50px
+	position: relative
+	.control
+		
+		position: absolute
+		border: 2px solid #fff
+		padding: 10px 20px
+		border-radius: 2px
+		display: inline-block
+		top: 50%
+		&._prev
+			left: -100px
+			._prev
+				display: inline-block
+				+s(prev-white)
+		&._next
+			right: -100px
+			._next
+				display: inline-block
+				+s(next-white)

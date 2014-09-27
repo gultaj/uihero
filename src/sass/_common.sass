@@ -30,16 +30,28 @@ video
 ._green
     color: #29af61
 
+._red
+    color: #ff4b59
+
 .btn
-    text-transform: uppercase
-    background: white
-    padding: 24px 30px 20px
-    width: 290px
-    border-radius: 4px
-    box-shadow: 0px 4px 0px rgba(white, .5)
+    // text-transform: uppercase
+    // background: white
+    padding: 11px 30px 11px
+    // width: 190px
+    color: white
+    border-radius: 2px
     font-weight: 600
-    font-size: 16px
-    
+    font-size: 14px
+    &._red
+        background: #ff4b59
+        box-shadow: 0px 2px 0px rgba(#e23d4a, 1)
+        &:hover
+            background: darken(#ff4b59, 5)
+    &._green
+        background: #1fab5a
+        box-shadow: 0px 2px 0px rgba(#178947, 1)
+        &:hover
+            background: darken(#1fab5a, 5) 
 .line
     margin: 15px auto
     display: block

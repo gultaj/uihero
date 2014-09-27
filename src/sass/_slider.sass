@@ -1,21 +1,59 @@
+
+
+
 .slider
-	padding-top: 50px
+	padding: 50px 0
 	position: relative
+	&__media
+		text-align: center
+
+	.item__title
+		@extend %title
+		margin-bottom: 10px
+	.item__body
+		padding-top: 150px
+	.item__text
+		@extend %text
+	.item__list
+		margin: 50px 0 60px
+		li
+			margin-bottom: 20px
+		&._circle
+			list-style-image: url(../img/list-circle.png)
+			list-style-position: inside
+			font-size: 18px
 	.control
-		
+		i
+			display: inline-block
+			+s(prev-white)
 		position: absolute
 		border: 2px solid #fff
 		padding: 10px 20px
 		border-radius: 2px
-		display: inline-block
 		top: 50%
+		&:hover
+			background: rgba(white, .05)
 		&._prev
 			left: -100px
-			._prev
-				display: inline-block
-				+s(prev-white)
+			i
+				+sp(prev-white)
 		&._next
 			right: -100px
-			._next
-				display: inline-block
-				+s(next-white)
+			i
+				+sp(next-white)
+	&__nav
+		position: absolute
+		left: 43%
+		bottom: 20px
+		text-align: center
+		span
+			height: 15px
+			width: 15px
+			border-radius: 50%
+			background: #fff
+			display: inline-block
+			margin: 0 5px
+			background: #22282f
+			&.is-active
+				background: #6c7d92
+

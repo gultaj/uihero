@@ -16,9 +16,12 @@ $icons: sprite-map("sprites/*.png", $spacing: 10px)
     +image-size(sprite-file($map, $sprite))
 
 //only image, when dimensions are useless
-=si($sprite, $map: $icons)
+=sp($sprite, $map: $icons)
     background-position: sprite-position($map, $sprite)
     //background: sprite($map, $sprite) no-repeat
+
+=list($sprite, $map: $icons)
+    list-style-image: sprite($map, $sprite) sprite-position($map, $sprite)
 
 // insert svg
 =svg($name, $width, $height)
@@ -29,9 +32,9 @@ $icons: sprite-map("sprites/*.png", $spacing: 10px)
     height: #{$height}px
     display: inline-block
 
-=sprite-size($sprite, $map: $icons)
+=ss($sprite, $map: $icons)
     +image-size(sprite-file($map, $sprite)) 
 
-=sprite-bkg($map: $icons)
+=sb($map: $icons)
     background: sprite-url($map) no-repeat
         

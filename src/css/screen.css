@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Welcome to Compass. In this file you should write your main styles. (or centralize your imports) Import this file using the following HTML or equivalent: <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 @import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,800);
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; vertical-align: baseline; }
@@ -42,24 +43,44 @@ video { width: auto; }
 .btn._green { background: #1fab5a; box-shadow: 0px 2px 0px #178947; }
 .btn._green:hover { background: #1b954f; }
 
-.line { margin: 15px auto; display: block; width: 87px; height: 4px; opacity: 0.15; background-color: #000; }
+.line { margin: 15px auto; display: block; height: 2px; opacity: 0.15; background-color: #000; }
 
-.header__in, .media__in { width: 1100px; margin: 0 auto; }
+.header__in, .media__in, .review__in, .desc__in { width: 1100px; margin: 0 auto; }
 
-.slider .item__text { font-size: 18px; font-weight: 400; margin-bottom: 10px; }
+.media__text, .slider .item__text { font-size: 18px; font-weight: 400; margin-bottom: 10px; }
 
-.header__title, .media__title, .slider .item__title { color: #fff; font-size: 30px; font-weight: 400; }
+.header__title, .media__title, .desc__title, .slider .item__title { color: #fff; font-size: 30px; font-weight: 400; }
 
-.logo { background: url('../img/sprites-sce65a9d73b.png') 0 -585px; width: 159px; height: 52px; float: left; }
+.logo { background: url('../img/sprites-sf661a64a6e.png') 0 -585px; width: 159px; height: 52px; float: left; }
 
 .header { color: #fff; position: relative; }
 .header::after { content: ""; background: url(../img/image-bg.png); opacity: 0.05; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: -1; }
 .header__in { padding-top: 30px; }
 
 .media { background: #fff; }
-.media__in { padding-top: 150px; }
+.media__in { padding: 150px 0; margin-bottom: 50px; }
 .media__title { color: #434e5d; font-weight: 600; margin-bottom: 20px; margin-top: 10px; }
 .media__desc { margin-bottom: 15px; }
+.media__text { color: #4d5766; line-height: 1.6em; padding-right: 100px; margin-bottom: 20px; }
+.media__video { height: 350px; }
+
+.review { background: #edebeb; }
+.review__in { padding: 30px 0 100px; text-align: center; font-family: "Josefin Slab", serif; color: #736f6f; }
+.review .icon._quote { background: url('../img/sprites-sf661a64a6e.png') 0 -914px; width: 51px; height: 52px; display: inline-block; }
+.review blockquote { font-size: 32px; padding: 20px 200px; quotes: "“" "”" "‘" "’"; }
+.review blockquote:before { content: open-quote; }
+.review blockquote:after { content: close-quote; }
+.review__author { margin: 30px auto 0; width: 400px; }
+.review .author__img { border-radius: 50%; height: 115px; width: 115px; overflow: hidden; float: left; }
+.review .author__name { font-size: 32px; font-weight: inherit; padding-top: 20px; }
+.review .author__desc { font-size: 22px; font-weight: inherit; }
+
+.desc { background: #fff; }
+.desc__in { color: #736f6f; padding: 100px 0; }
+.desc__content { padding-right: 100px; padding-top: 20px; }
+.desc__img { text-align: right; padding-left: 100px; }
+.desc__title { color: #434d5d; }
+.desc__title._bold { font-weight: bold; }
 
 .l .c-1-4, .l .c-1-2 { float: left; }
 
@@ -76,7 +97,7 @@ video { width: auto; }
 .slider .item__list li { margin-bottom: 20px; }
 .slider .item__list._circle { list-style-image: url(../img/list-circle.png); list-style-position: inside; font-size: 18px; }
 .slider .control { position: absolute; border: 2px solid #fff; padding: 10px 20px; border-radius: 2px; top: 50%; }
-.slider .control i { display: inline-block; background: url('../img/sprites-sce65a9d73b.png') 0 -850px; width: 18px; height: 27px; }
+.slider .control i { display: inline-block; background: url('../img/sprites-sf661a64a6e.png') 0 -850px; width: 18px; height: 27px; }
 .slider .control:hover { background: rgba(255, 255, 255, 0.05); }
 .slider .control._prev { left: -100px; }
 .slider .control._prev i { background-position: 0 -850px; }

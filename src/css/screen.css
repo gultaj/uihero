@@ -71,9 +71,9 @@ video { width: auto; }
 .review blockquote:before { content: open-quote; }
 .review blockquote:after { content: close-quote; }
 .review__author { margin: 30px auto 0; width: 400px; }
-.review .author__img { border-radius: 50%; height: 115px; width: 115px; overflow: hidden; float: left; }
-.review .author__name { font-size: 32px; font-weight: inherit; padding-top: 20px; }
-.review .author__desc { font-size: 22px; font-weight: inherit; }
+.review .author__img { border-radius: 50%; height: 115px; width: 115px; overflow: hidden; float: left; margin-right: 50px; }
+.review .author__name { font-size: 32px; font-weight: inherit; padding-top: 20px; text-align: left; }
+.review .author__desc { font-size: 22px; font-weight: inherit; text-align: left; }
 
 .desc { background: #fff; }
 .desc__in { color: #736f6f; padding: 100px 0; }

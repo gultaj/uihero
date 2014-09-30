@@ -37,6 +37,8 @@ video { width: auto; }
 
 ._red { color: #ff4b59; }
 
+._up { text-transform: uppercase; }
+
 .btn { padding: 11px 30px; color: white; border-radius: 2px; font-weight: 600; font-size: 14px; }
 .btn._red { background: #ff4b59; box-shadow: 0px 2px 0px #e23d4a; }
 .btn._red:hover { background: #ff3141; }
@@ -47,12 +49,12 @@ video { width: auto; }
 
 .line { margin: 15px auto; display: block; height: 1px; opacity: 0.15; background-color: #000; }
 
-.header__in, .media__in, .review__in, .desc__in, .clients__in, .price__in { width: 1100px; margin: 0 auto; }
+.header__in, .media__in, .review__in, .desc__in, .clients__in, .price__in, .works__in, .feed__in, .contact__in, .footer__in { width: 1100px; margin: 0 auto; }
 
-.media__text, .desc__text, .clients__desc, .price__desc, .price__list .item__desc, .price__list .item__feauters li, .slider .item__text { font-size: 18px; font-weight: 400; margin-bottom: 10px; }
+.media__text, .desc__text, .clients__desc, .price__desc, .price__list .item__desc, .price__list .item__feauters li, .works .item__text, .feed__desc, .feed cite, .contact__desc, .slider .item__text { font-size: 18px; font-weight: 400; margin-bottom: 10px; }
 
-.header__title, .media__title, .desc__title, .clients__title, .price__title, .price__list .item__title, .slider .item__title { color: #fff; font-size: 30px; font-weight: 400; }
-._bold.header__title, ._bold.media__title, ._bold.desc__title, ._bold.clients__title, ._bold.price__title, .price__list ._bold.item__title, .slider ._bold.item__title { font-weight: bold; }
+.header__title, .media__title, .desc__title, .clients__title, .price__title, .price__list .item__title, .works__title, .contact__title, .slider .item__title { color: #fff; font-size: 30px; font-weight: 400; }
+._bold.header__title, ._bold.media__title, ._bold.desc__title, ._bold.clients__title, ._bold.price__title, .price__list ._bold.item__title, ._bold.works__title, ._bold.contact__title, .slider ._bold.item__title { font-weight: bold; }
 
 .logo { background: url('../img/sprites-sf661a64a6e.png') 0 -585px; width: 159px; height: 52px; float: left; }
 
@@ -118,6 +120,64 @@ video { width: auto; }
 .price__list .item__feauters { padding-top: 50px; padding-bottom: 30px; }
 .price__list .item__feauters li { color: #999; margin-bottom: 20px; }
 .price__list .btn._big { padding-top: 15px; padding-bottom: 11px; min-width: 60%; }
+
+.works { background: #fff; }
+.works__in { text-align: center; padding: 50px 0 100px; }
+.works__title { color: #434d5d; }
+.works__nav { border-bottom: 1px solid #b7b7b7; margin: 0 50px; padding-bottom: 30px; text-align: right; }
+.works__nav .control { background: url('../img/sprites-sf661a64a6e.png') no-repeat; width: 11px; height: 17px; margin-left: 20px; display: inline-block; }
+.works__nav .control.is-disable { opacity: 0.5; cursor: default; }
+.works__nav .control._prev { background-position: 0 -794px; }
+.works__nav .control._prev.is-disable { background-position: 0 -887px; }
+.works__nav .control._next { background-position: 0 -674px; }
+.works__nav .control._next.is-disable { background-position: 0 -767px; }
+.works .work__list { margin-top: 30px; }
+.works .work__list li { height: 293px; margin-bottom: 5px; padding: 0 5px 5px; position: relative; }
+.works .work__list li img { width: 100%; height: 100%; border: 0; }
+.works .work__list li:hover { background: #ff4b59; }
+.works .work__list li:hover .item__desc { display: block; border: 1px solid #fff; }
+.works .work__list li:hover img { opacity: 0.22; }
+.works .item__desc { display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; text-align: center; margin: 10%; padding-top: 20px; color: #fff; }
+.works .item__text { font-weight: 400; font-size: 16px; line-height: 2; }
+.works .item__link { display: inline-block; background: #fff; border-radius: 50%; width: 80px; height: 80px; margin-top: 10px; }
+.works .icon._link { display: inline-block; background: url('../img/sprites-sf661a64a6e.png') 0 -542px; width: 33px; height: 33px; margin-top: 23px; }
+
+.feed { position: relative; height: 600px; }
+.feed::after { content: ""; background: url(../img/feed-bg.png); opacity: 0.5; position: absolute; top: -1px; right: 0; bottom: 0; left: 0; z-index: -1; }
+.feed__in { position: relative; text-align: center; padding: 100px 0; color: #fff; }
+.feed__in .icon._twitter_big { margin: 0 auto 30px; display: block; background: url('../img/sprites-sf661a64a6e.png') 0 -1110px; width: 66px; height: 55px; }
+.feed__in .logo { display: inline-block; float: none; margin-right: 50px; }
+.feed__desc { display: inline-block; font-weight: 400; vertical-align: bottom; }
+.feed__item p { margin: 50px 0; font-size: 35px; font-family: "Josefin Slab", serif; quotes: "“" "”" "‘" "’"; }
+.feed__item p:before { content: open-quote; }
+.feed__item p:after { content: close-quote; }
+.feed cite { font-style: normal; }
+.feed .control { position: absolute; background: url('../img/sprites-sf661a64a6e.png') no-repeat; width: 12px; height: 19px; display: inline-block; top: 60%; }
+.feed .control._next { background-position: 0 -701px; right: -50px; }
+.feed .control._prev { background-position: 0 -821px; left: -50px; }
+
+.contact__in { text-align: center; padding: 80px 0; }
+.contact__title { margin-bottom: 30px; }
+.contact__desc { color: #d9d9d9; font-family: "Josefin Slab", serif; font-size: 32px; padding: 0 40px; margin-bottom: 50px; quotes: "“" "”" "‘" "’"; }
+.contact__desc:before { content: open-quote; }
+.contact__desc:after { content: close-quote; }
+.contact .btn { font-weight: 700; min-width: 200px; }
+
+.footer { background: #293039; }
+.footer__in { *zoom: 1; color: #d9d9d9; padding: 40px 0; }
+.footer__in:after, .footer__in:before { content: " "; display: table; clear: both; }
+.footer .social__links { float: left; }
+.footer .social__links li { display: inline-block; vertical-align: middle; }
+.footer .social__links li.social__name { padding-left: 20px; }
+.footer .copyright { float: right; }
+.footer .copyright * { vertical-align: middle; }
+.footer .copyright span { padding-left: 10px; }
+.footer .icon { display: inline-block; background: url('../img/sprites-sf661a64a6e.png') no-repeat; width: 34px; height: 34px; }
+.footer .icon._fb { background-position: 0 -384px; }
+.footer .icon._tw { background-position: 0 -1066px; }
+.footer .icon._bh { background-position: 0 -186px; }
+.footer .icon._db { background-position: 0 -274px; }
+.footer .icon._cp { background-position: 0 -230px; }
 
 .l .c-1-4, .l .c-1-2, .l .c-1-3 { float: left; }
 

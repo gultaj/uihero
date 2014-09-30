@@ -185,3 +185,186 @@
             padding-top: 15px
             padding-bottom: 11px
             min-width: 60%
+.works
+    background: #fff
+    &__in
+        @extend %in
+        text-align: center
+        padding: 50px 0 100px
+    &__title
+        @extend %title
+        color: #434d5d
+    &__nav
+        border-bottom: 1px solid #b7b7b7 
+        margin: 0 50px
+        padding-bottom: 30px
+        text-align: right
+        .control
+            +sb()
+            +ss(prev)
+            margin-left: 20px
+            display: inline-block
+            &.is-disable
+                opacity: .5
+                cursor: default    
+            &._prev
+                +sp(prev-hover)
+                &.is-disable
+                    +sp(prev)                   
+            &._next
+                +sp(next-hover)
+                &.is-disable
+                    +sp(next)
+
+    .work__list
+        margin-top: 30px
+        li
+            img
+                width: 100%
+                // background: #ff4b59
+                height: 100%
+                border: 0
+            height: 293px
+            margin-bottom: 5px
+            padding: 0 5px 5px
+            position: relative
+            &:hover 
+                .item__desc
+                    display: block
+                    border: 1px solid #fff
+                img
+                    opacity: .22
+                background: #ff4b59
+    .item__desc
+        display: none
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        text-align: center
+        margin: 10%
+        padding-top: 20px
+        color: #fff
+    .item__text
+        @extend %text
+        font-weight: 400
+        font-size: 16px
+        line-height: 2
+    .item__link
+        display: inline-block
+        background: #fff
+        border-radius: 50%
+        width: 80px
+        height: 80px
+        margin-top: 10px
+    .icon._link
+        display: inline-block
+        +s(link)
+        margin-top: 23px
+.feed
+    position: relative
+    &::after
+        content: ""
+        background: url(../img/feed-bg.png)
+        opacity: .5
+        position: absolute
+        top: -1px
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: -1 
+    height: 600px
+    &__in
+        @extend %in
+        position: relative
+        text-align: center
+        padding: 100px 0
+        color: #fff
+        .icon._twitter_big
+            margin: 0 auto 30px
+            display: block
+            +s(twitter-big)
+        .logo
+            display: inline-block
+            float: none
+            margin-right: 50px
+    &__desc
+        display: inline-block
+        @extend %text
+        font-weight: 400
+        vertical-align: bottom
+    &__item p
+        margin: 50px 0
+        font-size: 35px
+        font-family: 'Josefin Slab', serif
+        quotes: "\201C""\201D""\2018""\2019"
+        &:before
+            content: open-quote
+        &:after
+            content: close-quote
+    cite
+        @extend %text
+        font-style: normal
+    .control
+        position: absolute
+        +sb()
+        +ss(prev-sm)
+        display: inline-block
+        top: 60%
+        &._next
+            +sp(next-sm)
+            right: -50px
+        &._prev
+            +sp(prev-sm)
+            left: -50px
+.contact
+    &__in
+        @extend %in
+        text-align: center
+        padding: 80px 0
+    &__title
+        @extend %title
+        margin-bottom: 30px
+    &__desc
+        @extend %text
+        color: #d9d9d9 
+        font-family: 'Josefin Slab', serif
+        font-size: 32px
+        padding: 0 40px
+        margin-bottom: 50px
+        quotes: "\201C""\201D""\2018""\2019"
+        &:before
+            content: open-quote
+        &:after
+            content: close-quote
+    .btn
+        font-weight: 700
+        min-width: 200px
+.footer
+    background: #293039
+    &__in
+        +clr
+        @extend %in
+        color: #d9d9d9
+        padding: 40px 0
+    .social__links
+        float: left
+        li
+            display: inline-block
+            vertical-align: middle
+            &.social__name
+                padding-left: 20px
+    .copyright
+        float: right
+        *
+            vertical-align: middle
+        span
+            padding-left: 10px
+    .icon
+        display: inline-block
+        +sb()
+        +ss(fb)
+        @each $i in fb, tw, bh, db, cp
+            &._#{$i}
+                +sp($i)

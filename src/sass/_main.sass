@@ -86,11 +86,11 @@
         font-weight: inherit
         text-align: left
 .desc
-    background: #fff 
+    background: #f1f1f1 
     &__in
         @extend %in   
         color: #736f6f    
-        padding: 100px 0
+        padding: 100px 0 0
     &__content
         padding-right: 100px
         padding-top: 20px
@@ -99,6 +99,89 @@
         padding-left: 100px
     &__title
         @extend %title
-        &._bold
-            font-weight: bold
         color: #434d5d
+        margin-bottom: 15px
+        &._copy
+            margin-bottom: 40px
+    &__text
+        @extend %text
+        margin-bottom: 10px
+        line-height: 1.6
+    &__list
+        margin: 50px 0 60px
+        li
+            margin-bottom: 15px
+            list-style-image: url(../img/list-mark.png)
+            list-style-position: inside
+            font-size: 18px
+    .line
+        margin-top: 50px
+.clients
+    background: #fff
+    &__in
+        @extend %in
+        padding: 50px 0
+        text-align: center
+    &__title
+        @extend %title
+        color: #434d5d
+        margin-bottom: 20px
+    &__desc
+        @extend %text
+        color: #606d7f
+    .client__list
+        margin: 100px auto
+        .client
+            +sb()
+            display: inline-block
+            // margin: 0 20px
+            height: 35px
+            width: 210px
+            @each $icon in audiojungle, activeden, envato, graphicriver, themeforest
+                &._#{$icon}
+                    +sp($icon)
+                    &:hover
+                        +sp(#{$icon}-hover)   
+.price
+    background: #f1f1f1
+    &__in
+        @extend %in
+        padding: 100px 0
+        text-align: center
+    &__title
+        @extend %title
+        color: #434d5d
+        margin-bottom: 10px
+    &__desc
+        @extend %text
+        color: #606d7f
+        margin-bottom: 80px
+    &__list
+        padding: 0 50px
+        .price__item
+            display: inline-block
+            border: 1px solid #a1a1a1
+            margin: 0 10px
+            padding: 10px 0 20px
+            width: 30%
+        .item__header
+            border-bottom: 1px solid #a1a1a1
+            // padding-bottom: 5px
+        .item__title
+            @extend %title
+            color: #5a677a
+            margin-bottom: 5px
+        .item__desc
+            @extend %text
+            color: #999
+        .item__feauters
+            padding-top: 50px
+            padding-bottom: 30px
+            li
+                color: #999
+                margin-bottom: 20px
+                @extend %text
+        .btn._big
+            padding-top: 15px
+            padding-bottom: 11px
+            min-width: 60%
